@@ -1,0 +1,6 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: http://192.168.132.27/devops/helm-charts
+    targetRevision: elk_reqs_bumpversion
