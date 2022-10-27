@@ -22,7 +22,7 @@ spec:
         controller:
           resources:
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 128Mi
           service:
             create: false
