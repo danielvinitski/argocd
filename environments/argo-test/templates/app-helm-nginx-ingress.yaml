@@ -15,7 +15,7 @@ spec:
       - CreateNamespace=true
   source:
     repoURL: "https://helm.nginx.com/stable"
-#    targetRevision: 2.16.0
+    targetRevision: 2.16.0
     chart: ingress-nginx
     helm:
       values: |
