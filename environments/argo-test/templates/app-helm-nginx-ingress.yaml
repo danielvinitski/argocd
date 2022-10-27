@@ -15,74 +15,74 @@ spec:
       - CreateNamespace=true
   source:
     repoURL: "https://helm.nginx.com/stable"
-    targetRevision: 2.16.0
-    chart: ingress-nginx
+    targetRevision: 0.15.1
+    chart: nginx-ingress
     helm:
-      values: |
-        controller:
-          #sysctls:
-          #  "net.core.somaxconn": "8192"
-        
-          ## DaemonSet or Deployment
-          ##
-          kind: DaemonSet
-        
-          # The update strategy to apply to the Deployment or DaemonSet
-          ##
-          updateStrategy:
-            rollingUpdate:
-              maxUnavailable: 1
-            type: RollingUpdate
-        
-          ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
-          ##
-          #replicaCount: 1
-        
-          minAvailable: 1
-
-          resources:
-            limits:
-              cpu: 1500m
-              memory: 1500Mi
-            requests:
-              cpu: 1000m
-              memory: 1000Mi
-        
-          autoscaling:
-            enabled: false
-            minReplicas: 1
-            maxReplicas: 11
-            targetCPUUtilizationPercentage: 50
-            targetMemoryUtilizationPercentage: 50
-        
-          autoscalingTemplate: []
-        
-          ## Enable mimalloc as a drop-in replacement for malloc.
-          ## ref: https://github.com/microsoft/mimalloc
-          ##
-          service:
-            enabled: false
-        
-            annotations: {}
-            labels: {}
-            # clusterIP: ""
-        
-            ## List of IP addresses at which the controller services are available
-            ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
-            ##
-            externalIPs: []
-        
-            loadBalancerIP: "192.168.81.240"
-        
-            enableHttp: true
-            enableHttps: true
-        
-            type: LoadBalancer
-        
-            # type: NodePort
-            # nodePorts:
-            #   http: 32080
-            #   https: 32443
-            #   tcp:
-            #     8080: 32808
+#      values: |
+#        controller:
+#          #sysctls:
+#          #  "net.core.somaxconn": "8192"
+#
+#          ## DaemonSet or Deployment
+#          ##
+#          kind: DaemonSet
+#
+#          # The update strategy to apply to the Deployment or DaemonSet
+#          ##
+#          updateStrategy:
+#            rollingUpdate:
+#              maxUnavailable: 1
+#            type: RollingUpdate
+#
+#          ## Ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
+#          ##
+#          #replicaCount: 1
+#
+#          minAvailable: 1
+#
+#          resources:
+#            limits:
+#              cpu: 1500m
+#              memory: 1500Mi
+#            requests:
+#              cpu: 1000m
+#              memory: 1000Mi
+#
+#          autoscaling:
+#            enabled: false
+#            minReplicas: 1
+#            maxReplicas: 11
+#            targetCPUUtilizationPercentage: 50
+#            targetMemoryUtilizationPercentage: 50
+#
+#          autoscalingTemplate: []
+#
+#          ## Enable mimalloc as a drop-in replacement for malloc.
+#          ## ref: https://github.com/microsoft/mimalloc
+#          ##
+#          service:
+#            enabled: false
+#
+#            annotations: {}
+#            labels: {}
+#            # clusterIP: ""
+#
+#            ## List of IP addresses at which the controller services are available
+#            ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
+#            ##
+#            externalIPs: []
+#
+#            loadBalancerIP: "192.168.81.240"
+#
+#            enableHttp: true
+#            enableHttps: true
+#
+#            type: LoadBalancer
+#
+#            # type: NodePort
+#            # nodePorts:
+#            #   http: 32080
+#            #   https: 32443
+#            #   tcp:
+#            #     8080: 32808
 
