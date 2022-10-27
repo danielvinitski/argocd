@@ -15,6 +15,6 @@ spec:
       prune: false
       selfHeal: false
   source:
-#    path: environments/nutanix-dev-rke-spaces
-    repoURL: http://192.168.132.27/devops/argocd-config
+    path: .
+    repoURL: https://github.com/danielvinitski/argocd.git
     targetRevision: master
