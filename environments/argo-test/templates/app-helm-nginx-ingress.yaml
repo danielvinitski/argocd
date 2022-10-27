@@ -60,8 +60,8 @@ spec:
 #          ## Enable mimalloc as a drop-in replacement for malloc.
 #          ## ref: https://github.com/microsoft/mimalloc
 #          ##
-        service:
-          enabled: false
+          service:
+            enabled: false
 #
 #            annotations: {}
 #            labels: {}
