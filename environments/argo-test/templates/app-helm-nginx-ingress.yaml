@@ -19,7 +19,12 @@ spec:
     chart: nginx-ingress
     helm:
       values: |
-#        controller:
+        controller:
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+
 #          #sysctls:
 #          #  "net.core.somaxconn": "8192"
 #
