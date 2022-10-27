@@ -40,13 +40,13 @@ spec:
 #
 #          minAvailable: 1
 #
-          resources:
-            limits:
-              cpu: 1500m
-              memory: 1500Mi
-            requests:
-              cpu: 1000m
-              memory: 1000Mi
+#          resources:
+#            limits:
+#              cpu: 1500m
+#              memory: 1500Mi
+#            requests:
+#              cpu: 1000m
+#              memory: 1000Mi
 #
 #          autoscaling:
 #            enabled: false
