@@ -14,8 +14,8 @@ spec:
     syncOptions:
       - CreateNamespace=true
   source:
-    repoURL: "https://kubernetes.github.io/ingress-nginx"
-    targetRevision: 2.16.0
+    repoURL: "https://helm.nginx.com/stable"
+#    targetRevision: 2.16.0
     chart: ingress-nginx
     helm:
       values: |
