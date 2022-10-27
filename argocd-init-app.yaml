@@ -17,4 +17,4 @@ spec:
   source:
     path: environments/argo-test
     repoURL: https://github.com/danielvinitski/argocd.git
-    targetRevision: master
+    targetRevision: main
