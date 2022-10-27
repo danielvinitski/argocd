@@ -61,7 +61,7 @@ spec:
           ## ref: https://github.com/microsoft/mimalloc
           ##
           service:
-            enabled: true
+            enabled: false
         
             annotations: {}
             labels: {}
