@@ -24,6 +24,9 @@ spec:
             requests:
               cpu: 100m
               memory: 128Mi
+          service:
+            create: false
+
 
 #          #sysctls:
 #          #  "net.core.somaxconn": "8192"
