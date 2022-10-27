@@ -15,6 +15,6 @@ spec:
       prune: false
       selfHeal: false
   source:
-    path: .
+    path: environments/argo-test
     repoURL: https://github.com/danielvinitski/argocd.git
     targetRevision: master
